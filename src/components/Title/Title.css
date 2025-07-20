@@ -1,8 +1,8 @@
 .title {
   color: #ebeef5;
-  font-family: "Poppins", sans-serif;
+  font-family: var(--font-poppins);
   font-weight: 600;
-  line-height: 80px;
+  line-height: 5rem;
   font-size: 4rem;
-  letter-spacing: -2%;
+  letter-spacing: -0.02rem;
 }

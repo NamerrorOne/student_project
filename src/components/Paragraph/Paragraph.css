@@ -1,6 +1,10 @@
-.title__paragraph {
+.paragraph {
   color: #8e95a9;
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
+  font-family: var(--font-poppins);
   line-height: 1.5rem;
+  font-size: 1rem;
+}
+
+.paragraph--lg {
+  font-size: 1.25rem;
 }
