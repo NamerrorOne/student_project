@@ -1,0 +1,11 @@
+.button {
+  font-family: var(--font-poppins);
+  border-radius: 0.75rem;
+  background-color: var(--primary-color);
+  padding: 1rem 2rem;
+  display: inline-block;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+}
