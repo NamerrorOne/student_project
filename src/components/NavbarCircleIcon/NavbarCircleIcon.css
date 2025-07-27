@@ -1,0 +1,13 @@
+.circle-icon {
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  font-family: var(--font-poppins);
+  height: 1.5rem;
+  width: 1.5rem;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 0.875rem;
+}
