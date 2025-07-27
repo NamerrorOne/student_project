@@ -1,27 +1,17 @@
+import { ValueIndicatorBadge } from "../../../components/ValueIndicatorBadge/ValueIndicatorBadge";
 import { NavbarItem } from "../../../components/NavbarItem/NavbarItem";
 import "./Navbar.css";
+import { LoginBadge } from "../../../components/LoginBadge/LoginBadge";
 
 export const Navbar = () => {
   return (
-    <div className="navbar">
+    <nav className="navbar">
+      <NavbarItem text="Search films" isActive />
+      <NavbarItem text="My films" icon={<ValueIndicatorBadge value={7} />} />
       <NavbarItem
-        isActive={true}
-        text="Search films"
-        onCLick={() => console.log("Search films")}
+        text="Log in"
+        icon={<LoginBadge src="./navbarIconDoor.svg" />}
       />
-      <NavbarItem
-        hasIcon={true}
-        iconType="circle"
-        text="My films"
-        onCLick={() => console.log("My films")}
-      />
-      <NavbarItem
-        hasIcon={true}
-        iconType="image"
-        icon="./navbarIconDoor.svg"
-        text="Log on"
-        onCLick={() => console.log("SLog on")}
-      />
-    </div>
+    </nav>
   );
 };

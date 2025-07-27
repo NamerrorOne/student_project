@@ -1,5 +1,9 @@
 import "./Logotype.css";
 
-export const Logotype = ({ src, onClick }) => {
-  return <img onClick={onClick} className="header-icon" src={src}></img>;
+export const Logotype = () => {
+  const src = "./headerIcon.svg";
+  const onClick = () => {
+    console.log("header logotype clicked");
+  };
+  return <img onClick={onClick} className="logotype" src={src}></img>;
 };

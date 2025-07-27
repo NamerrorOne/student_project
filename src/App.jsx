@@ -17,11 +17,7 @@ function App() {
       <Title text={tText} />
       <Paragraph text={pText} fontSize={fontSize} />
       <Button onClick={() => console.log("Ckicked")} text={bText} />
-      <Input
-        showImage={true}
-        showPlaceholder={true}
-        placeholderText={"enter text"}
-      />
+      <Input isIconShow placeholder="enter text" />
     </>
   );
 }

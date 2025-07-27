@@ -2,20 +2,18 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1rem 0.75rem;
   column-gap: 0.5rem;
   cursor: pointer;
 }
 
 .navbar-item__text {
   font-weight: 600;
-  font-family: var(--font-poppins);
   color: #a8aebf;
   font-size: 1rem;
 }
 
 .navbar-item__text_active {
-  color: white;
+  color: var(--white);
 }
 
 .navbar-item__image {

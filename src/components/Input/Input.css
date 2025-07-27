@@ -11,19 +11,15 @@
 
 .input-inner,
 .input-inner::placeholder {
-  font-family: var(--font-poppins);
   font-size: 0.875rem;
   color: #475069;
 }
 
 .input-inner {
   flex-grow: 1;
-  background: transparent;
+  background: none;
   border: none;
   outline: none;
-}
-
-.input-inner::placeholder {
 }
 
 .input-icon {
