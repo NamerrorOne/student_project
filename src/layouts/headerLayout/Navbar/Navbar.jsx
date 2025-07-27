@@ -1,0 +1,24 @@
+import { ValueIndicatorBadge } from "../../../components/ValueIndicatorBadge/ValueIndicatorBadge";
+import { NavbarItem } from "../../../components/NavbarItem/NavbarItem";
+import "./Navbar.css";
+import { ImageContainer } from "../../../components/ImageContainer/ImageContainer";
+
+export const Navbar = () => {
+  return (
+    <nav className="navbar">
+      <NavbarItem href="#" text="Search films" isActive />
+      <NavbarItem
+        href="#"
+        text="My films"
+        icon={<ValueIndicatorBadge value={7} />}
+      />
+      <NavbarItem
+        href="#"
+        text="Log in"
+        icon={
+          <ImageContainer className="login-badge" src="./navbarIconDoor.svg" />
+        }
+      />
+    </nav>
+  );
+};

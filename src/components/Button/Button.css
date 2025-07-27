@@ -4,7 +4,7 @@
   background-color: var(--primary-color);
   padding: 1rem 2rem;
   display: inline-block;
-  color: white;
+  color: var(--white);
   font-size: 1rem;
   border: none;
   cursor: pointer;

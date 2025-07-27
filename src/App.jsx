@@ -1,6 +1,8 @@
 import { Paragraph } from "./components/Paragraph/Paragraph";
 import { Title } from "./components/Title/Title";
 import { Button } from "./components/Button/Button";
+import { Input } from "./components/Input/Input";
+import { Header } from "./layouts/headerLayout/Header/Header";
 
 function App() {
   const tText = "Поиск";
@@ -11,9 +13,11 @@ function App() {
 
   return (
     <>
+      <Header />
       <Title text={tText} />
       <Paragraph text={pText} fontSize={fontSize} />
-      <Button text={bText} />
+      <Button onClick={() => console.log("Ckicked")} text={bText} />
+      <Input isIconShow placeholder="enter text" />
     </>
   );
 }

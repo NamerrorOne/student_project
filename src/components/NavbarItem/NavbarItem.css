@@ -1,0 +1,22 @@
+.navbar-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 0.5rem;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.navbar-item__text {
+  font-weight: 600;
+  color: #a8aebf;
+  font-size: 1rem;
+}
+
+.navbar-item__text_active {
+  color: var(--white);
+}
+
+.navbar-item__image {
+  height: 1.5rem;
+}
