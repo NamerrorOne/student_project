@@ -7,7 +7,7 @@ export const NavbarItem = ({ href, icon, text, isActive }) => {
 
   return (
     <a href={href} className="navbar-item">
-      <p className={textStyle}>{text}</p>
+      <span className={textStyle}>{text}</span>
       {icon && icon}
     </a>
   );

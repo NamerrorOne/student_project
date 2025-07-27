@@ -1,16 +1,23 @@
 import { ValueIndicatorBadge } from "../../../components/ValueIndicatorBadge/ValueIndicatorBadge";
 import { NavbarItem } from "../../../components/NavbarItem/NavbarItem";
 import "./Navbar.css";
-import { LoginBadge } from "../../../components/LoginBadge/LoginBadge";
+import { ImageContainer } from "../../../components/ImageContainer/ImageContainer";
 
 export const Navbar = () => {
   return (
     <nav className="navbar">
-      <NavbarItem text="Search films" isActive />
-      <NavbarItem text="My films" icon={<ValueIndicatorBadge value={7} />} />
+      <NavbarItem href="#" text="Search films" isActive />
       <NavbarItem
+        href="#"
+        text="My films"
+        icon={<ValueIndicatorBadge value={7} />}
+      />
+      <NavbarItem
+        href="#"
         text="Log in"
-        icon={<LoginBadge src="./navbarIconDoor.svg" />}
+        icon={
+          <ImageContainer className="login-badge" src="./navbarIconDoor.svg" />
+        }
       />
     </nav>
   );
