@@ -1,6 +1,7 @@
 import { Paragraph } from "./components/Paragraph/Paragraph";
 import { Title } from "./components/Title/Title";
 import { Button } from "./components/Button/Button";
+import { Input } from "./components/Input/Input";
 
 function App() {
   const tText = "Поиск";
@@ -14,6 +15,11 @@ function App() {
       <Title text={tText} />
       <Paragraph text={pText} fontSize={fontSize} />
       <Button onClick={() => console.log("Ckicked")} text={bText} />
+      <Input
+        showImage={true}
+        showPlaceholder={true}
+        placeholderText={"enter text"}
+      />
     </>
   );
 }

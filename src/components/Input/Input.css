@@ -1,0 +1,31 @@
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  width: 24rem;
+  border: .125rem solid #323b54;
+  padding: 1rem 1.25rem;
+  border-radius: .75rem;
+  column-gap: 1rem;
+  justify-content: flex-start;
+}
+
+.input-inner,
+.input-inner::placeholder {
+  font-family: var(--font-poppins);
+  font-size: 0.875rem;
+  color: #475069;
+}
+
+.input-inner {
+  flex-grow: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+
+.input-inner::placeholder {
+}
+
+.input-icon {
+  height: 1.5rem;
+}
