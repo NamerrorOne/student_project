@@ -13,7 +13,7 @@ function App() {
     <>
       <Title text={tText} />
       <Paragraph text={pText} fontSize={fontSize} />
-      <Button text={bText} />
+      <Button onClick={() => console.log("Ckicked")} text={bText} />
     </>
   );
 }
