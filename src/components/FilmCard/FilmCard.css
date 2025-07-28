@@ -1,0 +1,29 @@
+.film-card {
+  border-radius: 0.75rem;
+  padding: 0.5rem;
+  padding-bottom: 1rem;
+  background: #20283ecc;
+  backdrop-filter: blur(80px);
+  display: flex;
+  flex-direction: column;
+}
+
+.film-card__image-wrapper {
+  position: relative;
+}
+
+.film-card__image {
+  border-radius: 0.5rem;
+}
+
+.film-card__title {
+  margin-top: 1rem;
+  font-weight: 600;
+  color: var(--grey-50);
+  margin-left: 0.5rem;
+  letter-spacing: 0.02rem;
+}
+
+.favor-row__wrapper {
+  margin-top: 1rem;
+}

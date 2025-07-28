@@ -3,6 +3,7 @@ import { Title } from "./components/Title/Title";
 import { Button } from "./components/Button/Button";
 import { Input } from "./components/Input/Input";
 import { Header } from "./layouts/headerLayout/Header/Header";
+import { MovieGrid } from "./layouts/MovieGrid/MovieGrid";
 
 function App() {
   const tText = "Поиск";
@@ -18,6 +19,7 @@ function App() {
       <Paragraph text={pText} fontSize={fontSize} />
       <Button onClick={() => console.log("Ckicked")} text={bText} />
       <Input isIconShow placeholder="enter text" />
+      <MovieGrid />
     </>
   );
 }
