@@ -3,9 +3,13 @@
 :root {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   --font-poppins: "Poppins", sans-serif;
   --primary-color: #7b6ef6;
   --white: #fff;
+  --in-favor-color: #37d8a7;
+  --golden-orange: #ffad49;
+  --grey-50: #ebeef5;
 }
 
 body {
@@ -15,12 +19,15 @@ body {
   background-image: url("./background.svg");
 }
 
-h1 {
-  margin: 0;
-  padding: 0;
-}
-
-p {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+img {
   margin: 0;
   padding: 0;
 }

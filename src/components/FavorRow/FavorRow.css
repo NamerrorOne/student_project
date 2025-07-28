@@ -1,0 +1,18 @@
+.favor-row,
+.unfavor-row {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+}
+
+.favor-row {
+  color: var(--in-favor-color);
+}
+
+.unfavor-row {
+  color: var(--primary-color);
+}
+
+.favor-row__counter {
+  margin-left: 0.5rem;
+}
