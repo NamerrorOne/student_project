@@ -9,7 +9,7 @@ export const FilmCard = ({ img, title, rating, inFavor }) => {
         <img className="film-card__image" src={img} alt="" />
         <RatingBadge rating={rating} />
       </div>
-      <h6 className="film-card__title">{title}</h6>
+      <span className="film-card__title">{title}</span>
       <div className="favor-row__wrapper">
         {inFavor ? (
           <FavorRow icon="./bookmark.svg" text="In saved" inFavor={inFavor} />

@@ -6,7 +6,7 @@ export const FavorRow = ({ text, icon, inFavor }) => {
   return (
     <div className={style}>
       <img className="favor-row__icon" src={icon}></img>
-      <span className="favor-row__counter">{text}</span>
+      <span className="favor-row__text">{text}</span>
     </div>
   );
 };
