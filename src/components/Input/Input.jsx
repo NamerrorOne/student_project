@@ -2,17 +2,17 @@ import styles from "./Input.module.css";
 
 export const Input = ({ isIconShow, placeholder }) => {
   return (
-    <div className={styles["input-wrapper"]}>
+    <div className={styles["inputWrapper"]}>
       {isIconShow && (
         <img
-          className={styles["input-icon"]}
+          className={styles["inputIcon"]}
           src="./inputSearchIcon.svg"
           alt="search icon"
         />
       )}
       <input
         placeholder={placeholder}
-        className={styles["input-inner"]}
+        className={styles["inputInner"]}
         type="text"
       ></input>
     </div>

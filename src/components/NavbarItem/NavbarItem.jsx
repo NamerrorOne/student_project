@@ -3,10 +3,10 @@ import cn from "classnames";
 
 export const NavbarItem = ({ href, icon, text, isActive }) => {
   return (
-    <a href={href} className={styles["navbar-item"]}>
+    <a href={href} className={styles["navbarItem"]}>
       <span
-        className={cn(styles["navbar-item__text"], {
-          [styles["navbar-item__text_active"]]: isActive,
+        className={cn(styles["navbarItemText"], {
+          [styles["navbarItemTextActive"]]: isActive,
         })}
       >
         {text}

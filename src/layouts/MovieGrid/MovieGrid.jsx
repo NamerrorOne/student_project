@@ -4,7 +4,7 @@ import styles from "./MovieGrid.module.css";
 
 export const MovieGrid = () => {
   return (
-    <div className={styles["movie-grid__wrapper"]}>
+    <div className={styles["movieGridWrapper"]}>
       {INITIAL_MOCK_DATA.map((movie) => (
         <FilmCard
           title={movie.title}

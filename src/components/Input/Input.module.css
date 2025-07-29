@@ -1,4 +1,4 @@
-.input-wrapper {
+.inputWrapper {
   display: flex;
   align-items: center;
   width: 24rem;
@@ -9,19 +9,19 @@
   justify-content: flex-start;
 }
 
-.input-inner,
-.input-inner::placeholder {
+.inputInner,
+.inputInner::placeholder {
   font-size: 0.875rem;
   color: #475069;
 }
 
-.input-inner {
+.inputInner {
   flex-grow: 1;
   background: none;
   border: none;
   outline: none;
 }
 
-.input-icon {
+.inputIcon {
   height: 1.5rem;
 }

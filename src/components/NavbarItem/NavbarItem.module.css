@@ -1,4 +1,4 @@
-.navbar-item {
+.navbarItem {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -7,16 +7,16 @@
   text-decoration: none;
 }
 
-.navbar-item__text {
+.navbarItemText {
   font-weight: 600;
   color: #a8aebf;
   font-size: 1rem;
 }
 
-.navbar-item__text_active {
+.navbarItemTextActive {
   color: var(--white);
 }
 
-.navbar-item__image {
+.navbarItemImage {
   height: 1.5rem;
 }

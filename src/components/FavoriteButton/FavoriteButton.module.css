@@ -1,5 +1,5 @@
-.favor-row,
-.unfavor-row {
+.favorRow,
+.unfavorRow {
   display: inline-flex;
   align-items: center;
   font-weight: 600;
@@ -7,15 +7,15 @@
   cursor: pointer;
 }
 
-.favor-row {
+.favorRow {
   color: var(--in-favor-color);
 }
 
-.unfavor-row {
+.unfavorRow {
   color: var(--primary-color);
 }
 
-.favor-row__text {
+.favorRowText {
   margin-left: 0.5rem;
   letter-spacing: 0.02rem;
 }
