@@ -4,7 +4,7 @@ export const Logotype = () => {
   return (
     <img
       onClick={null}
-      className={styles["logotype"]}
+      className={styles.logotype}
       src="./headerIcon.svg"
     ></img>
   );

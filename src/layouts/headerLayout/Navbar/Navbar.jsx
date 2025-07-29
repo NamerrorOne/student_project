@@ -5,7 +5,7 @@ import { ImageContainer } from "../../../components/ImageContainer/ImageContaine
 
 export const Navbar = () => {
   return (
-    <nav className={styles["navbar"]}>
+    <nav className={styles.navbar}>
       <NavbarItem href="#" text="Search films" isActive />
       <NavbarItem
         href="#"
