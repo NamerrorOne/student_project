@@ -7,7 +7,7 @@ export const NavbarItem = ({ href, icon, text, isActive }) => {
       <span
         className={cn(
           styles.navbarItemText,
-          isActive && [styles.navbarItemTextActive],
+          isActive && styles.navbarItemTextActive,
         )}
       >
         {text}
