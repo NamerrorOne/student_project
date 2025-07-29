@@ -1,13 +1,16 @@
-import "./NavbarItem.css";
+import styles from "./NavbarItem.module.css";
+import cn from "classnames";
 
 export const NavbarItem = ({ href, icon, text, isActive }) => {
-  const textStyle = isActive
-    ? "navbar-item__text navbar-item__text_active"
-    : "navbar-item__text";
-
   return (
-    <a href={href} className="navbar-item">
-      <span className={textStyle}>{text}</span>
+    <a href={href} className={styles["navbar-item"]}>
+      <span
+        className={cn(styles["navbar-item__text"], {
+          [styles["navbar-item__text_active"]]: isActive,
+        })}
+      >
+        {text}
+      </span>
       {icon && icon}
     </a>
   );

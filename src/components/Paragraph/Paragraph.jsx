@@ -1,6 +1,14 @@
-import "./Paragraph.css";
+import styles from "./Paragraph.module.css";
+import cn from "classnames";
 
 export const Paragraph = ({ text, fontSize }) => {
-  const fontSizeStyle = fontSize == "lg" ? "paragraph--lg" : "";
-  return <p className={`paragraph ${fontSizeStyle}`}>{text}</p>;
+  return (
+    <p
+      className={cn(styles.paragraph, {
+        [styles["paragraph--lg"]]: fontSize === "lg",
+      })}
+    >
+      {text}
+    </p>
+  );
 };

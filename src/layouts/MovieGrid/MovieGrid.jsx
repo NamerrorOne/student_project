@@ -1,10 +1,10 @@
 import { FilmCard } from "../../components/FilmCard/FilmCard";
 import { INITIAL_MOCK_DATA } from "../../initialData";
-import "./MovieGrid.css";
+import styles from "./MovieGrid.module.css";
 
 export const MovieGrid = () => {
   return (
-    <div className="movie-grid__wrapper">
+    <div className={styles["movie-grid__wrapper"]}>
       {INITIAL_MOCK_DATA.map((movie) => (
         <FilmCard
           title={movie.title}

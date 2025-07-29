@@ -1,9 +1,11 @@
-import "./Logotype.css";
+import styles from "./Logotype.module.css";
 
 export const Logotype = () => {
-  const src = "./headerIcon.svg";
-  const handleClick = () => {
-    console.log("header logotype clicked");
-  };
-  return <img onClick={handleClick} className="logotype" src={src}></img>;
+  return (
+    <img
+      onClick={null}
+      className={styles.logotype}
+      src="./headerIcon.svg"
+    ></img>
+  );
 };

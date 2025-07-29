@@ -1,9 +1,10 @@
 .favor-row,
 .unfavor-row {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   font-weight: 600;
   margin-left: 0.5rem;
+  cursor: pointer;
 }
 
 .favor-row {
