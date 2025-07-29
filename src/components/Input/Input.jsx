@@ -1,18 +1,18 @@
-import "./Input.css";
+import styles from "./Input.module.css";
 
 export const Input = ({ isIconShow, placeholder }) => {
   return (
-    <div className="input-wrapper">
+    <div className={styles.inputWrapper}>
       {isIconShow && (
         <img
-          className="input-icon"
+          className={styles.inputIcon}
           src="./inputSearchIcon.svg"
           alt="search icon"
         />
       )}
       <input
         placeholder={placeholder}
-        className="input-inner"
+        className={styles.inputInner}
         type="text"
       ></input>
     </div>

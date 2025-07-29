@@ -1,10 +1,10 @@
 import { Logotype } from "../../../components/Logotype/Logotype";
 import { Navbar } from "../Navbar/Navbar";
-import "./Header.css";
+import styles from "./Header.module.css";
 
 export const Header = () => {
   return (
-    <header className="header">
+    <header className={styles.header}>
       <Logotype />
       <Navbar />
     </header>
