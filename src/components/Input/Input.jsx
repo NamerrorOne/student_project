@@ -1,8 +1,14 @@
 import styles from "./Input.module.css";
+import cn from "classnames";
 
-export const Input = ({ isIconShow, placeholder }) => {
+export const Input = ({
+  isIconShow,
+  placeholder,
+  isValid = true,
+  ...props
+}) => {
   return (
-    <div className={styles.inputWrapper}>
+    <div className={cn(styles.inputWrapper, !isValid && styles.invalid)}>
       {isIconShow && (
         <img
           className={styles.inputIcon}
@@ -11,8 +17,9 @@ export const Input = ({ isIconShow, placeholder }) => {
         />
       )}
       <input
+        {...props}
         placeholder={placeholder}
-        className={styles.inputInner}
+        className={cn(styles.inputInner)}
         type="text"
       ></input>
     </div>
