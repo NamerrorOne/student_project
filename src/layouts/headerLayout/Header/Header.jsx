@@ -2,11 +2,11 @@ import { Logotype } from "../../../components/Logotype/Logotype";
 import { Navbar } from "../Navbar/Navbar";
 import styles from "./Header.module.css";
 
-export const Header = () => {
+export const Header = ({ onClick, userName }) => {
   return (
     <header className={styles.header}>
       <Logotype />
-      <Navbar />
+      <Navbar onClick={onClick} userName={userName} />
     </header>
   );
 };
