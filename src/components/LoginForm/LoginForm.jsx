@@ -1,4 +1,4 @@
-// import styles from "./LoginForm.module.css"
+import styles from "./LoginForm.module.css";
 
 import { Title } from "../Title/Title.jsx";
 import { Input } from "../Input/Input.jsx";
@@ -28,13 +28,11 @@ export const LoginForm = ({ onSubmit }) => {
   };
 
   useEffect(() => {
-    var timerId;
-
     if (!isValid.name) {
       focusError(isValid);
     }
 
-    timerId = setTimeout(() => {
+    const timerId = setTimeout(() => {
       dispatchLoginForm({ type: "RESET_VALIDITY" });
     }, 2500);
     return () => clearTimeout(timerId);
@@ -60,7 +58,7 @@ export const LoginForm = ({ onSubmit }) => {
   };
 
   return (
-    <form onSubmit={logIn}>
+    <form className={styles.loginForm} onSubmit={logIn}>
       <Title text="Log into profile" />
       <Input
         isValid={isValid.name}

@@ -19,7 +19,7 @@ export const Input = ({
       <input
         {...props}
         placeholder={placeholder}
-        className={cn(styles.inputInner)}
+        className={styles.inputInner}
         type="text"
       ></input>
     </div>

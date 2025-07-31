@@ -1,20 +1,9 @@
 import styles from "./NavbarItem.module.css";
 import cn from "classnames";
 
-export const NavbarItem = ({
-  href,
-  icon,
-  text,
-  isActive,
-  handleLogOut = null,
-}) => {
-  const click = (e) => {
-    e.preventDefault();
-    handleLogOut();
-  };
-
+export const NavbarItem = ({ href, icon, text, isActive, onClick = null }) => {
   return (
-    <a onClick={click} href={href} className={styles.navbarItem}>
+    <a onClick={onClick} href={href} className={styles.navbarItem}>
       <span
         className={cn(
           styles.navbarItemText,
