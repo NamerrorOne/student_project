@@ -1,7 +1,7 @@
 import styles from "./NavbarItem.module.css";
 import cn from "classnames";
 
-export const NavbarItem = ({ href, icon, text, isActive, onClick = null }) => {
+export const NavbarItem = ({ href, icon, text, isActive, onClick}) => {
   return (
     <a onClick={onClick} href={href} className={styles.navbarItem}>
       <span
