@@ -35,7 +35,7 @@ function App() {
       setUserName(user?.name);
     }
 
-    console.log();
+    console.log(userName);
   };
 
   const handleLogOut = () => {
