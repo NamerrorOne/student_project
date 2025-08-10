@@ -7,6 +7,7 @@ import { useContext } from "react";
 
 export const Navbar = ({ onClick }) => {
   const { userName } = useContext(UserContext);
+
   return (
     <>
       <nav className={styles.navbar}>
