@@ -2,8 +2,11 @@ import { ValueIndicatorBadge } from "../../../components/ValueIndicatorBadge/Val
 import { NavbarItem } from "../../../components/NavbarItem/NavbarItem";
 import styles from "./Navbar.module.css";
 import { ImageContainer } from "../../../components/ImageContainer/ImageContainer";
+import { UserContext } from "../../../context/user-context";
+import { useContext } from "react";
 
-export const Navbar = ({ onClick, userName }) => {
+export const Navbar = ({ onClick }) => {
+  const { userName } = useContext(UserContext);
   return (
     <>
       <nav className={styles.navbar}>

@@ -6,13 +6,17 @@ import { Header } from "./layouts/headerLayout/Header/Header";
 import { MovieGrid } from "./layouts/MovieGrid/MovieGrid";
 import { LoginForm } from "./components/LoginForm/LoginForm";
 import { useUsersStorage } from "./components/hooks/use-usersStorage.hook";
+import { UserContext, UserContextProvider } from "./context/user-context";
+import { useContext } from "react";
 
 function App() {
   const [usersStorage, saveUsers] = useUsersStorage();
+  const { userName, setUserName } = useContext(UserContext);
 
   const addUser = (user) => {
     if (!usersStorage?.length) {
       saveUsers([{ name: user.name, isLogined: user.isLogined }]);
+      setUserName(user?.name);
     }
 
     const exist = usersStorage?.some((u) => u.name == user.name);
@@ -22,12 +26,16 @@ function App() {
         ...usersStorage,
         { name: user.name, isLogined: user.isLogined },
       ]);
+      setUserName(user?.name);
     } else {
       const updatedUsers = usersStorage.map((u) =>
         u.name === user.name ? { ...u, isLogined: true } : u,
       );
       saveUsers(updatedUsers);
+      setUserName(user?.name);
     }
+
+    console.log();
   };
 
   const handleLogOut = () => {
@@ -39,14 +47,16 @@ function App() {
     }));
 
     saveUsers(updatedUsers);
+    setUserName(null);
+    console.log(userName);
   };
 
-  const loggedInUser =
-    usersStorage?.find((user) => user.isLogined && user.name) || null;
+  // const loggedInUser =
+  //      usersStorage?.find((user) => user.isLogined && user.name) || null;
 
   return (
     <>
-      <Header onClick={handleLogOut} userName={loggedInUser?.name} />
+      <Header onClick={handleLogOut} />
       <LoginForm onSubmit={addUser} />
       <Title text="Поиск" />
       <Paragraph
