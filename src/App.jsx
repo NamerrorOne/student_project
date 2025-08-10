@@ -5,48 +5,56 @@ import { Input } from "./components/Input/Input";
 import { Header } from "./layouts/headerLayout/Header/Header";
 import { MovieGrid } from "./layouts/MovieGrid/MovieGrid";
 import { LoginForm } from "./components/LoginForm/LoginForm";
-import { useUsersStorage } from "./components/hooks/use-usersStorage.hook";
+import { useUsersStorage } from "./hooks/useUsersStorage";
+import { UserContext } from "./context/user-context";
+import { useContext, useEffect } from "react";
 
 function App() {
   const [usersStorage, saveUsers] = useUsersStorage();
+  const { setUserName } = useContext(UserContext);
+
+  useEffect(() => {
+    if (!usersStorage || usersStorage.length === 0) {
+      setUserName(null);
+      return;
+    }
+
+    const loggedUser = usersStorage.find((u) => u.isLogined);
+
+    setUserName(loggedUser ? loggedUser.name : null);
+  }, [usersStorage, setUserName]);
 
   const addUser = (user) => {
-    if (!usersStorage?.length) {
-      saveUsers([{ name: user.name, isLogined: user.isLogined }]);
-    }
+    const { name } = user;
+    const exist = usersStorage.some((u) => u.name === name);
 
-    const exist = usersStorage?.some((u) => u.name == user.name);
+    let updatedUsers;
 
     if (!exist) {
-      saveUsers([
-        ...usersStorage,
-        { name: user.name, isLogined: user.isLogined },
-      ]);
+      updatedUsers = [...usersStorage, { name, isLogined: true }];
     } else {
-      const updatedUsers = usersStorage.map((u) =>
-        u.name === user.name ? { ...u, isLogined: true } : u,
+      updatedUsers = usersStorage.map((u) =>
+        u.name === name ? { ...u, isLogined: true } : u,
       );
-      saveUsers(updatedUsers);
     }
+
+    saveUsers(updatedUsers);
+    setUserName(name);
   };
 
   const handleLogOut = () => {
-    if (!usersStorage) return;
-
-    const updatedUsers = usersStorage.map((user) => ({
-      ...user,
+    const updatedUsers = usersStorage.map((u) => ({
+      ...u,
       isLogined: false,
     }));
 
     saveUsers(updatedUsers);
+    setUserName(null);
   };
-
-  const loggedInUser =
-    usersStorage?.find((user) => user.isLogined && user.name) || null;
 
   return (
     <>
-      <Header onClick={handleLogOut} userName={loggedInUser?.name} />
+      <Header onClick={handleLogOut} />
       <LoginForm onSubmit={addUser} />
       <Title text="Поиск" />
       <Paragraph

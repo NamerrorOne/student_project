@@ -53,7 +53,7 @@ export const LoginForm = ({ onSubmit }) => {
   };
 
   const logIn = (e) => {
-    e?.preventDefault();
+    e.preventDefault();
     dispatchLoginForm({ type: "LOG_IN" });
   };
 
