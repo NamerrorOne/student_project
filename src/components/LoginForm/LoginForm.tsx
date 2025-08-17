@@ -1,12 +1,17 @@
 import styles from "./LoginForm.module.css";
 
-import { Title } from "../Title/Title.jsx";
-import { Input } from "../Input/Input.jsx";
-import { Button } from "../Button/Button.jsx";
-import { useEffect, useReducer, useRef } from "react";
-import { loginFormReducer, INITIAL_STATE } from "./LoginFormReducer.js";
+import { Title } from "../Title/Title.js";
+import { Input } from "../Input/Input.js";
+import { Button } from "../Button/Button.js";
+import { FC, useEffect, useReducer, useRef } from "react";
+import {
+  loginFormReducer,
+  INITIAL_STATE,
+  ILoginFormState,
+} from "./LoginFormReducer.js";
+import { ILoginForm } from "./LoginForm.props";
 
-export const LoginForm = ({ onSubmit }) => {
+export const LoginForm: FC<ILoginForm> = ({ onSubmit }) => {
   const [loginFormState, dispatchLoginForm] = useReducer(
     loginFormReducer,
     INITIAL_STATE,
@@ -14,12 +19,12 @@ export const LoginForm = ({ onSubmit }) => {
 
   const { values, isReadyToLogIn, isValid } = loginFormState;
 
-  const nameRef = useRef();
+  const nameRef = useRef<HTMLInputElement>(null);
 
-  const focusError = (isValid) => {
+  const focusError = (isValid: ILoginFormState["isValid"]) => {
     switch (true) {
       case !isValid.name:
-        nameRef.current.focus();
+        nameRef.current?.focus();
         break;
 
       default:
@@ -45,14 +50,14 @@ export const LoginForm = ({ onSubmit }) => {
     }
   }, [isReadyToLogIn]);
 
-  const onChange = (e) => {
+  const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     dispatchLoginForm({
       type: "SET_VALUE",
       payload: { [e.target.name]: e.target.value },
     });
   };
 
-  const logIn = (e) => {
+  const logIn = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     dispatchLoginForm({ type: "LOG_IN" });
   };

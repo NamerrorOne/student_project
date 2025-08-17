@@ -1,10 +1,12 @@
-export const INITIAL_STATE = {
+import { IUser } from "../../models/user.model";
+
+export const INITIAL_STATE: ILoginFormState = {
   values: { name: "", isLogined: false },
   isValid: { name: true },
   isReadyToLogIn: false,
 };
 
-export const loginFormReducer = (state, action) => {
+export const loginFormReducer = (state: ILoginFormState, action: Action) => {
   switch (action.type) {
     case "RESET_VALIDITY": {
       return { ...state, isValid: INITIAL_STATE.isValid };
@@ -35,3 +37,17 @@ export const loginFormReducer = (state, action) => {
       };
   }
 };
+
+export interface ILoginFormState {
+  values: IUser;
+  isValid: {
+    name: boolean;
+  };
+  isReadyToLogIn: boolean;
+}
+
+export type Action =
+  | { type: "RESET_VALIDITY" }
+  | { type: "CLEAR" }
+  | { type: "LOG_IN" }
+  | { type: "SET_VALUE"; payload: Partial<ILoginFormState["values"]> };

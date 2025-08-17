@@ -8,10 +8,11 @@ import { LoginForm } from "./components/LoginForm/LoginForm";
 import { useUsersStorage } from "./hooks/useUsersStorage";
 import { UserContext } from "./context/user-context";
 import { useContext, useEffect } from "react";
+import { IUser } from "./models/user.model";
 
 function App() {
   const [usersStorage, saveUsers] = useUsersStorage();
-  const { setUserName } = useContext(UserContext);
+  const { setUserName } = useContext(UserContext)!;
 
   useEffect(() => {
     if (!usersStorage || usersStorage.length === 0) {
@@ -19,22 +20,26 @@ function App() {
       return;
     }
 
-    const loggedUser = usersStorage.find((u) => u.isLogined);
+    const loggedUser: IUser | undefined = usersStorage.find(
+      (userInSorage: IUser) => userInSorage.isLogined,
+    );
 
     setUserName(loggedUser ? loggedUser.name : null);
   }, [usersStorage, setUserName]);
 
-  const addUser = (user) => {
+  const addUser = (user: IUser) => {
     const { name } = user;
     const exist = usersStorage.some((u) => u.name === name);
 
-    let updatedUsers;
+    let updatedUsers: IUser[];
 
     if (!exist) {
       updatedUsers = [...usersStorage, { name, isLogined: true }];
     } else {
-      updatedUsers = usersStorage.map((u) =>
-        u.name === name ? { ...u, isLogined: true } : u,
+      updatedUsers = usersStorage.map((userInStorage: IUser) =>
+        userInStorage.name === name
+          ? { ...userInStorage, isLogined: true }
+          : userInStorage,
       );
     }
 
@@ -43,8 +48,8 @@ function App() {
   };
 
   const handleLogOut = () => {
-    const updatedUsers = usersStorage.map((u) => ({
-      ...u,
+    const updatedUsers = usersStorage.map((userInStorage: IUser) => ({
+      ...userInStorage,
       isLogined: false,
     }));
 

@@ -1,8 +1,15 @@
 import styles from "./FilmCard.module.css";
 import { FavoriteButton } from "../FavoriteButton/FavoriteButton";
 import { RatingBadge } from "../RatingBadge/RatingBadge";
+import { FC } from "react";
+import { IFilmCardProps } from "./FilmCard.props";
 
-export const FilmCard = ({ img, title, rating, isFavorite }) => {
+export const FilmCard: FC<IFilmCardProps> = ({
+  img,
+  title,
+  rating,
+  isFavorite,
+}) => {
   return (
     <div className={styles.filmCard}>
       <div className={styles.filmCardImageWrapper}>
