@@ -1,6 +1,8 @@
+import { ReactNode } from "react";
+
 export interface INavbarItem {
   href: string;
-  icon?: React.ReactNode;
+  icon?: ReactNode;
   text: string;
   isActive?: boolean;
   onClick?: () => void;

@@ -10,7 +10,7 @@ export const RatingBadge: FC<IRatingBadge> = ({ rating }) => {
         src="./star.svg"
         alt="rating-icon"
       />
-      <span className={styles.ratingBadgeCount}>{rating}</span>
+      <span className={styles.ratingBadgeCount}>{rating || "n/a"}</span>
     </div>
   );
 };

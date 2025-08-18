@@ -12,7 +12,10 @@ interface IUserContext {
 }
 
 // eslint-disable-next-line react-refresh/only-export-components
-export const UserContext = createContext<IUserContext | null>(null);
+export const UserContext = createContext<IUserContext>({
+  userName: null,
+  setUserName: () => {},
+});
 
 export const UserContextProvider = ({ children }: { children: ReactNode }) => {
   const [userName, setUserName] = useState<string | null>(null);

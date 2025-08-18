@@ -20,7 +20,6 @@ export const INITIAL_MOCK_DATA: IMovie[] = [
     img: "./shangChiFilm.png",
     title: "Shang-chi legend",
     isFavorite: false,
-    rating: 511,
   },
   {
     id: 3,
@@ -41,7 +40,6 @@ export const INITIAL_MOCK_DATA: IMovie[] = [
     img: "./shangChiFilm.png",
     title: "Shang-chi legend",
     isFavorite: false,
-    rating: 3,
   },
   {
     id: 6,

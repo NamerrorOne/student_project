@@ -7,7 +7,7 @@ import { FC, useContext } from "react";
 import { INavbarProps } from "./Navbar.props";
 
 export const Navbar: FC<INavbarProps> = ({ onClick }) => {
-  const { userName } = useContext(UserContext)!;
+  const { userName } = useContext(UserContext);
 
   return (
     <>

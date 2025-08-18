@@ -1,4 +1,4 @@
-type FontSizeType = "lg" | null;
+type FontSizeType = "lg" | "md";
 
 export interface IParagraphProps {
   text: string;

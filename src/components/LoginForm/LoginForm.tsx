@@ -3,7 +3,14 @@ import styles from "./LoginForm.module.css";
 import { Title } from "../Title/Title.js";
 import { Input } from "../Input/Input.js";
 import { Button } from "../Button/Button.js";
-import { FC, useEffect, useReducer, useRef } from "react";
+import {
+  ChangeEvent,
+  FC,
+  FormEvent,
+  useEffect,
+  useReducer,
+  useRef,
+} from "react";
 import {
   loginFormReducer,
   INITIAL_STATE,
@@ -50,14 +57,14 @@ export const LoginForm: FC<ILoginForm> = ({ onSubmit }) => {
     }
   }, [isReadyToLogIn]);
 
-  const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const onChange = (e: ChangeEvent<HTMLInputElement>) => {
     dispatchLoginForm({
       type: "SET_VALUE",
       payload: { [e.target.name]: e.target.value },
     });
   };
 
-  const logIn = (e: React.FormEvent<HTMLFormElement>) => {
+  const logIn = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     dispatchLoginForm({ type: "LOG_IN" });
   };

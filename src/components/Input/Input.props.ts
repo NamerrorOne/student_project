@@ -1,7 +1,7 @@
-import { InputHTMLAttributes } from "react";
+import { InputHTMLAttributes, RefObject } from "react";
 
 export interface IInputProps extends InputHTMLAttributes<HTMLInputElement> {
   isIconShow?: boolean;
   isValid?: boolean;
-  ref?: React.Ref<HTMLInputElement>;
+  ref?: RefObject<HTMLInputElement | null>;
 }

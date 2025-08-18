@@ -2,7 +2,9 @@ import { FC } from "react";
 import styles from "./FavoriteButton.module.css";
 import { IFavoriteButtonProps } from "./FavoriteButton.props";
 
-export const FavoriteButton: FC<IFavoriteButtonProps> = ({ isFavorite }) => {
+export const FavoriteButton: FC<IFavoriteButtonProps> = ({
+  isFavorite = false,
+}) => {
   return (
     <>
       {isFavorite && (

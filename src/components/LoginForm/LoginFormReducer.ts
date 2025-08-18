@@ -47,7 +47,5 @@ export interface ILoginFormState {
 }
 
 export type Action =
-  | { type: "RESET_VALIDITY" }
-  | { type: "CLEAR" }
-  | { type: "LOG_IN" }
+  | { type: "RESET_VALIDITY" | "CLEAR" | "LOG_IN" }
   | { type: "SET_VALUE"; payload: Partial<ILoginFormState["values"]> };

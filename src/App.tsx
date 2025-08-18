@@ -12,7 +12,7 @@ import { IUser } from "./models/user.model";
 
 function App() {
   const [usersStorage, saveUsers] = useUsersStorage();
-  const { setUserName } = useContext(UserContext)!;
+  const { setUserName } = useContext(UserContext);
 
   useEffect(() => {
     if (!usersStorage || usersStorage.length === 0) {
