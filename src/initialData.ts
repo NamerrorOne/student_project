@@ -1,4 +1,6 @@
-export const INITIAL_MOCK_DATA = [
+import { IMovie } from "./models/movie.model";
+
+export const INITIAL_MOCK_DATA: IMovie[] = [
   {
     id: 0,
     img: "./shangChiFilm.png",
@@ -18,7 +20,6 @@ export const INITIAL_MOCK_DATA = [
     img: "./shangChiFilm.png",
     title: "Shang-chi legend",
     isFavorite: false,
-    rating: 511,
   },
   {
     id: 3,
@@ -39,7 +40,6 @@ export const INITIAL_MOCK_DATA = [
     img: "./shangChiFilm.png",
     title: "Shang-chi legend",
     isFavorite: false,
-    rating: 3,
   },
   {
     id: 6,

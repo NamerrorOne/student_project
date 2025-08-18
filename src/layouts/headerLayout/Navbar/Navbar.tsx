@@ -3,9 +3,10 @@ import { NavbarItem } from "../../../components/NavbarItem/NavbarItem";
 import styles from "./Navbar.module.css";
 import { ImageContainer } from "../../../components/ImageContainer/ImageContainer";
 import { UserContext } from "../../../context/user-context";
-import { useContext } from "react";
+import { FC, useContext } from "react";
+import { INavbarProps } from "./Navbar.props";
 
-export const Navbar = ({ onClick }) => {
+export const Navbar: FC<INavbarProps> = ({ onClick }) => {
   const { userName } = useContext(UserContext);
 
   return (

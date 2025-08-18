@@ -1,19 +1,20 @@
 import { useEffect, useState } from "react";
+import { IUser } from "../models/user.model";
 
 export const useUsersStorage = () => {
-  const STORAGE_KEY = "users";
-  const [usersStorage, setUsersStorage] = useState([]);
+  const STORAGE_KEY: string = "users";
+  const [usersStorage, setUsersStorage] = useState<IUser[]>([]);
 
-  const saveUsers = (newUsers) => {
+  const saveUsers = (newUsers: IUser[]) => {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(newUsers));
     setUsersStorage(newUsers);
   };
 
   useEffect(() => {
     try {
-      const item = localStorage.getItem(STORAGE_KEY);
+      const item: string | null = localStorage.getItem(STORAGE_KEY);
       if (item) {
-        const parsed = JSON.parse(item);
+        const parsed: IUser[] = JSON.parse(item);
         setUsersStorage(parsed);
       } else {
         setUsersStorage([]);
@@ -24,5 +25,5 @@ export const useUsersStorage = () => {
     }
   }, []);
 
-  return [usersStorage, saveUsers];
+  return [usersStorage, saveUsers] as const;
 };

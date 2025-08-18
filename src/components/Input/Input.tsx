@@ -1,11 +1,15 @@
+import { FC } from "react";
 import styles from "./Input.module.css";
 import cn from "classnames";
+import { IInputProps } from "./Input.props";
 
-export const Input = ({
+export const Input: FC<IInputProps> = ({
   isIconShow,
   placeholder,
   isValid = true,
-  ...props
+  name,
+  value,
+  onChange,
 }) => {
   return (
     <div className={cn(styles.inputWrapper, !isValid && styles.invalid)}>
@@ -17,10 +21,12 @@ export const Input = ({
         />
       )}
       <input
-        {...props}
         placeholder={placeholder}
         className={styles.inputInner}
         type="text"
+        name={name}
+        value={value}
+        onChange={onChange}
       ></input>
     </div>
   );
