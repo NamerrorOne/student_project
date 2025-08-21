@@ -20,7 +20,7 @@ export const Navbar: FC<INavbarProps> = ({ onClick }) => {
         />
         {userName && (
           <NavbarItem
-            href="/currentUser"
+            href="/profile"
             text={userName}
             icon={<ImageContainer src="/userIcon.svg" />}
           />
