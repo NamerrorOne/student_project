@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 export const Header: FC<IHeaderProps> = ({ onClick }) => {
   return (
     <header className={styles.header}>
-      <Link to={"/favorites"}>
+      <Link to={"/"}>
         <Logotype />
       </Link>
       <Navbar onClick={onClick} />
