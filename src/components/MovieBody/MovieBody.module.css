@@ -1,0 +1,42 @@
+.body {
+  display: flex;
+  column-gap: 5rem;
+  margin-top: 5rem;
+}
+
+.image {
+  width: 30rem;
+  height: 45rem;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+}
+
+.description {
+  color: var(--grey-300);
+  font-size: 1.25rem;
+  line-height: 2rem;
+}
+
+.interactiveRow {
+  display: flex;
+  column-gap: 1.25rem;
+}
+
+.infoItem {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+}
+
+.infoItemTitle {
+  color: var(--grey-400);
+}
+
+.infoItemValue {
+  color: var(--grey-100);
+  font-size: 1.25rem;
+}

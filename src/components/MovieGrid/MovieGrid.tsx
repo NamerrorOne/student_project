@@ -13,6 +13,7 @@ export const MovieGrid = () => {
           img={movie.img}
           isFavorite={movie.isFavorite}
           rating={movie.rating}
+          id={movie.id}
         />
       ))}
     </div>

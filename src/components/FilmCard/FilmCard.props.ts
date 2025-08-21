@@ -3,4 +3,5 @@ export interface IFilmCardProps {
   title: string;
   rating?: number;
   isFavorite: boolean;
+  id: number;
 }

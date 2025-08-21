@@ -10,6 +10,10 @@
   --in-favor-color: #37d8a7;
   --golden-orange: #ffad49;
   --grey-50: #ebeef5;
+  --grey-100: #c3c8d4;
+  --grey-300: #8e95a9;
+  --grey-400: #767e94;
+  --grey-background: #20283ecc;
 }
 
 body {

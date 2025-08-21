@@ -6,6 +6,7 @@
   backdrop-filter: blur(80px);
   display: flex;
   flex-direction: column;
+  text-decoration: none;
 }
 
 .filmCardImageWrapper {
@@ -26,4 +27,8 @@
 
 .favorRowWrapper {
   margin-top: 1rem;
+}
+
+.stylesForBadge {
+  position: absolute;
 }
