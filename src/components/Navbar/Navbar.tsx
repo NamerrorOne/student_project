@@ -14,7 +14,7 @@ export const Navbar: FC<INavbarProps> = ({ onClick }) => {
       <nav className={styles.navbar}>
         <NavbarItem href="/" text="Search films" isActive />
         <NavbarItem
-          href="/profile"
+          href="/favorites"
           text="My films"
           icon={<ValueIndicatorBadge value={7} />}
         />

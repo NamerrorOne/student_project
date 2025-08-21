@@ -1,7 +1,7 @@
 import styles from "./FilmCard.module.css";
 import { FavoriteButton } from "../FavoriteButton/FavoriteButton";
 import { RatingBadge } from "../RatingBadge/RatingBadge";
-import { FC } from "react";
+import { FC, MouseEvent } from "react";
 import { IFilmCardProps } from "./FilmCard.props";
 import { Link } from "react-router-dom";
 
@@ -12,7 +12,7 @@ export const FilmCard: FC<IFilmCardProps> = ({
   isFavorite,
   id,
 }) => {
-  const onFavoriteClick = (e: React.MouseEvent<HTMLDivElement>) => {
+  const onFavoriteClick = (e:MouseEvent<HTMLDivElement>) => {
     e.preventDefault();
   };
 
