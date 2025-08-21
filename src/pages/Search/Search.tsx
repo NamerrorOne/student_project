@@ -13,7 +13,7 @@ export const Search = () => {
       <Paragraph
         text="Введите название фильма, сериала или мультфильма для поиска и добавления в избранное."
         fontSize="lg"
-        additionalStyles={styles.paragraph}
+        className={styles.paragraph}
       />
       <div className={styles.interactiveRow}>
         <Input className={styles.input} isIconShow placeholder="enter text" />

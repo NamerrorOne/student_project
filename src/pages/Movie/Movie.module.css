@@ -1,16 +1,18 @@
 .wrapper {
-  width: 65.625rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .headling {
-  color: #767e94;
+  color: var(--grey-400);
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
 }
 
 .footerFeedback {
-  background: #20283ecc;
+  background: var(--grey-background);
   border-radius: 24px;
   backdrop-filter: blur(24px);
   padding: 40px;
@@ -23,14 +25,14 @@
 }
 
 .feedbackHeaderTitle {
-  color: #c3c8d4;
+  color: var(--grey-100);
   font-size: 20px;
   font-weight: 700;
   line-height: 32px;
 }
 
 .feedbackHeaderDate {
-  color: #767e94;
+  color: var(--grey-400);
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;

@@ -1,5 +1,5 @@
 .header {
-  background: #20283ecc;
+  background: var(--grey-background);
   border-radius: 24px;
   backdrop-filter: blur(24px);
   padding: 40px;
@@ -17,7 +17,7 @@
 }
 
 .title {
-  color: #ebeef5;
+  color: var(--grey-50);
   font-size: 32px;
   font-weight: 600;
   line-height: 40px;

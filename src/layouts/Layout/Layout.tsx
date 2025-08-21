@@ -4,6 +4,7 @@ import { IUser } from "../../models/user.model";
 import { Header } from "../../components/Header/Header";
 import { useContext, useEffect } from "react";
 import { UserContext } from "../../context/user-context";
+import styles from "./Layout.module.css";
 
 export const Layout = () => {
   const [usersStorage, saveUsers] = useUsersStorage();
@@ -33,9 +34,9 @@ export const Layout = () => {
   };
 
   return (
-    <>
+    <div className={styles.layoutWrapper}>
       <Header onClick={handleLogOut} />
       <Outlet />
-    </>
+    </div>
   );
 };

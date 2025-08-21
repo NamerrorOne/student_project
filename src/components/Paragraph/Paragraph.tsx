@@ -6,7 +6,7 @@ import { IParagraphProps } from "./Paragraph.props";
 export const Paragraph: FC<IParagraphProps> = ({
   text,
   fontSize = "md",
-  additionalStyles,
+  className,
 }) => {
   return (
     <p
@@ -14,7 +14,7 @@ export const Paragraph: FC<IParagraphProps> = ({
         styles.paragraph,
         fontSize === "lg" && styles.paragraphLg,
         fontSize === "md" && styles.paragraphMd,
-        additionalStyles,
+        className,
       )}
     >
       {text}

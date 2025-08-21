@@ -15,6 +15,7 @@ export const FilmCard: FC<IFilmCardProps> = ({
   const onFavoriteClick = (e: React.MouseEvent<HTMLDivElement>) => {
     e.preventDefault();
   };
+
   return (
     <Link to={`/movie/${id}`} className={styles.filmCard}>
       <div className={styles.filmCardImageWrapper}>
@@ -23,7 +24,7 @@ export const FilmCard: FC<IFilmCardProps> = ({
           src={img}
           alt="film poster image"
         />
-        <RatingBadge rating={rating} additionalStyles={styles.stylesForBadge} />
+        <RatingBadge rating={rating} className={styles.stylesForBadge} />
       </div>
       <span className={styles.filmCardTitle}>{title}</span>
       <div className={styles.favorRowWrapper}>

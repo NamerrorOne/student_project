@@ -21,7 +21,7 @@ export const MovieBody = ({
         <Paragraph
           fontSize="lg"
           text={description}
-          additionalStyles={styles.description}
+          className={styles.description}
         />
         <div className={styles.interactiveRow}>
           <RatingBadge rating={rating} />
@@ -42,7 +42,7 @@ export const MovieBody = ({
         <div className={styles.infoItem}>
           <span className={styles.infoItemTitle}>Janre</span>
           <span className={styles.infoItemValue}>
-            {janre?.map((janr) => janr)?.join(", ")}
+            {janre.length ? janre.map((janr) => janr).join(", ") : "Не указано"}
           </span>
         </div>
       </div>

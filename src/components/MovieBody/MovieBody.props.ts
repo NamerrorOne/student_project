@@ -1,7 +1,7 @@
 export interface IMovieBody {
   image: string;
   description: string;
-  rating: number;
+  rating?: number;
   inFavor: boolean;
   janre: string[];
   duration: number;
