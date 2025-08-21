@@ -38,4 +38,5 @@
 
 .infoItemValue {
   color: var(--grey-100);
+  font-size: 1.25rem;
 }

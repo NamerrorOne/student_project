@@ -1,0 +1,17 @@
+.movieGridWrapper {
+  margin-top: 5rem;
+}
+
+.paragraph {
+  margin-top: 1rem;
+}
+
+.interactiveRow {
+  display: flex;
+  column-gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.searchWrapper {
+  margin-top: 5rem;
+}
